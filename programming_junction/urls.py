@@ -19,7 +19,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('programmingcourses/',include('programmingcourses.urls')),
-    path('blog/', include('blog.urls'))
-
+    path('programmingcourses/',include('programmingcourses.urls'))
 ]
