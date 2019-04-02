@@ -1,0 +1,60 @@
+{% extends 'programmingcourses/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block body %}
+<div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
+    <h1 style="color:blue">Basic Input and Output</h1>
+    <br>
+    <p>With this topic, we begin our series of Python Practice tutorials. Every tutorial describes a specific topic with examples. A problem statement at the end of each tutorial will assess your understanding.</p>
+    <br>
+    <h2 style="color:chocolate">Introduction</h2>
+    <br>
+    <p>Like all high-level languages, Python is easy to read, takes less time to write, and is portable. This versatile programming language has two versions: Python 2 and Python 3. Wiki says: Python 2.x is legacy, Python 3.x is the present and future of the language. That is, Python 2 is no longer in development and all new features will be added in Python 3. Note that, keeping this in mind, the code examples in this tutorial are in Python 3. Wherever Python 2.x code is shown, it will be highlighted.</p>
+    <br>
+    <h2 style="color:chocolate">Execution</h2>
+    <br>
+    <p>Python executes code top to bottom, when wrijutten in the correct syntax. To execute the code in our python tutorials, you will need to install python in your machine as a prerequisite. A small description on how to install Python and get the interpreter running is given here. Once the interpreter is running you can start typing in commands to get the result.</p>
+    <br>
+    <h2 style="color:chocolate">Input using the input( ) function</h2>
+    <br>
+    <p>A function is defined as a block of organized, reusable code used to perform a single, related action. Python has many built-in functions; you can also create your own. Python has an input function which lets you ask a user for some text input. You call this function to tell the program to stop and wait for the user to key in the data. In Python 2, you have a built-in function raw_input(), whereas in Python 3, you have input(). The program will resume once the user presses the ENTER or RETURN key. Look at this example to get input from the keyboard using Python 2 in the interactive mode. Your output is displayed in quotes once you hit the ENTER key.</p>
+    <br>
+    <div style="background-color:white;">
+        <code>
+>>>raw_input() <br>
+I am learning at hackerearth   (This is where you type in) <br>
+'I am learning at hackerearth' (The interpreter showing you how the input is captured.)
+
+        </code>
+    </div>
+    <br>
+    <p>In Python 3.x, you need to use input().</p>
+    <br>
+    <div style="background-color:white;">
+        <code>
+>>> input() <br>
+I am learning at hackerearth. <br>
+'I am learning at hackerearth.' <br>
+
+        </code>
+    </div>
+    <br>
+    <p>You can always tell your user what to input by printing a prompt. There is no difference between input in Python 3 and raw_input in Python 2 except for the keywords.</p>
+    <br>
+    <h2 style="color:chocolate">Output using the print() function</h2> <br>
+    <p>
+To output your data to the screen, use the print() function. You can write print(argument) and this will print the argument in the next line when you press the ENTER key.
+Definitions to remember: An argument is a value you pass to a function when calling it. A value is a letter or a number. A variable is a name that refers to a value. It begins with a letter. An assignment statement creates new variables and gives them values.
+This syntax is valid in both Python 3.x and Python 2.x. For example, if your data is "Guido," you can put "Guido" inside the parentheses ( ) after print.
+</p>
+    <br>
+      <div style="background-color:white;">
+        <code>
+>>> print("Guido")
+Guido
+
+        </code>
+    </div>
+</div>
+{% endblock %}

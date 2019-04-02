@@ -1,0 +1,80 @@
+{% extends 'programmingcourses/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block body %}
+<div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
+    <h1 style="color:blue">Function</h1>
+    <p>A function is a block of code which only runs when it is called.<br>
+You can pass data, known as parameters, into a function.<br>
+A function can return data as a result.<br>
+</p>
+    <h2 style="color:chocolate">Creating s Function</h2>
+    <p>In python a function is defined using the <mark>def</mark> keyword :</p>
+    <h3>Example</h3>
+    <div style="background-color:white">
+        <code>
+            def my function():<br>
+             print("Hello ffrom a function")
+        </code>
+    </div> <br>
+    <h2 style="color:chocolate">Calling a Function</h2>
+    <p>To call a function, use the function name followed by parenthesis:</p>
+    <h3>Example</h3>
+    <div style="background-color:white">
+        <code>
+            def my function():<br>
+                print("Hello from a Function")<br>
+            <br>
+            <b><mark> my_function()</mark></b>
+        </code>
+    </div>
+    <h2 style="color:chocolate">parameters</h2>
+    <p>Information can be passed to functions as parameter.
+Parameters are specified after the function name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.
+The following example has a function with one parameter (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:
+</p>
+    <h3>Example</h3>
+    <div style="background-color:white">
+        <code>
+            def my_function(fname): <br>
+  print(fname + " Refsnes")<br>
+
+my_function("Emil")<br>
+my_function("Tobias")<br>
+my_function("Linus")<br>
+
+        </code>
+    </div>
+<h2 style="color:chocolate">Default Parameter Value</h2>
+    <p>The following example shows how to use a default parameter value.
+If we call the function without parameter, it uses the default value:
+</p>
+    <h3>Example</h3>
+     <div style="background-color:white">
+        <code>
+           def my_function(country = "Norway"): <br>
+  print("I am from " + country)<br>
+my_function("Sweden")<br>
+my_function("India")<br>
+my_function()<br>
+my_function("Brazil")<br>
+        </code>
+    </div>
+    <h2 style="color:chocolate">Return Values</h2>
+    <p>To let a function return a value, use the <mark>return</mark> statement:
+    </p>
+    <h3>Example</h3>
+     <div style="background-color:white">
+        <code>
+          def my_function(x): <br>
+  return 5 * x<br>
+
+print(my_function(3))<br>
+print(my_function(5))<br>
+print(my_function(9))<br>
+
+        </code>
+    </div>
+</div>
+{% endblock %}

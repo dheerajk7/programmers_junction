@@ -1,0 +1,199 @@
+{% extends 'programmingcourses/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block body %}
+
+<head>
+        <style>
+                	table, td, th {
+        border: 1px solid black;
+        text-align:left;
+        }
+
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        }
+        th,td {
+        padding: 15px;
+        }
+        </style>
+</head>
+
+<body>
+<div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
+    <h1 style="color:blue">Exception handling</h1>
+
+    <p>Python provides two very important features to handle any unexpected error in your Python programs and to add debugging capabilities in them −</p>
+    <h2 style="color:chocolate">Exception Handling</h2> <p>This would be covered in this tutorial. Here is a list standard Exceptions available in Python: Standard Exceptions.</p>
+    <h2 style="color:chocolate">Assertions</h2><p>This would be covered in Assertions in Pythontutorial.</p>
+    <p>List of Standard Exceptions −</p>
+
+
+        <table>
+        <tr>
+           <th><b> Sr. No. </b> </th>
+           <th> <b> Exception Name & Descripstion </b></th>
+        </tr>
+<tr>
+          <td> 1 </td>
+          <td><b>Exception :</b>
+              Base class for all exceptions
+         </td>
+</tr>
+
+<tr>
+          <td> 2 </td>
+          <td><b>StopIteration :</b>
+Raised when the next() method of an iterator does not point to any object.
+
+         </td>
+</tr>
+
+<tr>
+          <td> 3 </td>
+          <td><b>SystemExit :</b>
+Raised by the sys.exit() function.
+
+         </td>
+</tr>
+
+<tr>
+          <td> 4 </td>
+          <td><b>StandardError :</b>
+Base class for all built-in exceptions except StopIteration and SystemExit.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 5 </td>
+          <td><b>ArithmeticError :</b>
+Base class for all errors that occur for numeric calculation.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 6 </td>
+          <td><b>OverflowError :</b>
+Raised when a calculation exceeds maximum limit for a numeric type.
+         </td>
+</tr>
+
+<tr>
+          <td> 7 </td>
+          <td><b>FloatingPointError :</b>
+Raised when a floating point calculation fails.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 8 </td>
+          <td><b>ZeroDivisionError :</b>
+Raised when division or modulo by zero takes place for all numeric types.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 9 </td>
+          <td><b>AssertionError :</b>
+Raised in case of failure of the Assert statement.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 10 </td>
+          <td><b>AttributeError :</b>
+Raised in case of failure of attribute reference or assignment.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 11 </td>
+          <td><b>EOFError :</b>
+Raised when there is no input from either the raw_input() or input() function and the end of file is reached.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 12 </td>
+          <td><b>ImportError :</b>
+Raised when an import statement fails.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 13 </td>
+          <td><b> KeyboardInterrupt :</b>
+Raised when the user interrupts program execution, usually by pressing Ctrl+c.
+         </td>
+</tr>
+
+<tr>
+          <td> 14 </td>
+          <td><b>LookupError :</b>
+Base class for all lookup errors.
+         </td>
+</tr>
+
+
+<tr>
+          <td> 15 </td>
+          <td><b>IndexError :</b>
+Raised when an index is not found in a sequence.
+         </td>
+</tr>
+
+<tr>
+          <td> 16 </td>
+          <td><b>KeyError :</b>
+Raised when the specified key is not found in the dictionary.
+         </td>
+</tr>
+
+<tr>
+          <td> 17 </td>
+          <td><b>NameError :</b>
+Raised when an identifier is not found in the local or global namespace.
+         </td>
+</tr>
+
+<tr>
+          <td> 18 </td>
+          <td><b>UnboundLocalError :</b>
+Raised when trying to access a local variable in a function or method but no value has been assigned to it.
+         </td>
+</tr>
+
+<tr>
+          <td> 19 </td>
+          <td><b>EnvironmentError :</b>
+Base class for all exceptions that occur outside the Python environment.
+         </td>
+</tr>
+
+<tr>
+          <td> 20 </td>
+          <td><b>IOError :</b>
+Raised when an input/ output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.
+         </td>
+</tr>
+
+        </table>
+
+    <h2 style="color:chocolate">Assertions in Python</h2>
+<p>An assertion is a sanity-check that you can turn on or turn off when you are done with your testing of the program.
+The easiest way to think of an assertion is to liken it to a raise-if statement (or to be more accurate, a raise-if-not statement). An expression is tested, and if the result comes up false, an exception is raised.
+Assertions are carried out by the assert statement, the newest keyword to Python, introduced in version 1.5.
+    Programmers often place assertions at the start of a function to check for valid input, and after a function call to check for valid output.</p>
+</div>
+</body>
+{% endblock %}

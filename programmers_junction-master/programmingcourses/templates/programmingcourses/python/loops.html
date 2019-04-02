@@ -1,0 +1,70 @@
+{% extends 'programmingcourses/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block body %}
+<head>
+        <style>
+        table, th ,td {
+        border : 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
+    <h1 style="color:blue">Loops</h1>
+    <p>In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on. There may be a situation when you need to execute a block of code several number of times.
+Programming languages provide various control structures that allow for more complicated execution paths.
+A loop statement allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement −
+</p>
+
+    <img src="" />
+
+    <p>Python programming language provides following types of loops to handle looping requirements.</p>
+    <table style="width:100%">
+    <tr>
+        <th><b>Sr. No.</b></th> <th><b>Loop Type & Description</b></th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><b>while loop</b><br> Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.</td>
+    </tr>
+	<tr>
+        <td>2</td>
+        <td><b>for loop</b><br>Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</td>
+    </tr>
+<tr>
+        <td>3</td>
+        <td><b>nested loop</b><br>You can use one or more loop inside any another while, for or do..while loop.</td>
+    </tr>
+    </table><br>
+
+    <h2 style="color:chocolate">Loop Control Statements</h2>
+    <p>Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.
+Python supports the following control statements. Click the following links to check their detail.
+Let us go through the loop control statements briefly-
+</p>
+    <table style="width:100%">
+    <tr>
+        <th><b>Sr. No.</b></th> <th><b>Control Statement & Description</b></th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><b>break statement</b><br>Terminates the loop statement and transfers execution to the statement immediately following the loop.</td>
+    </tr>
+	<tr>
+        <td>2</td>
+        <td><b>continue statement</b><br>Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</td>
+    </tr>
+<tr>
+        <td>3</td>
+        <td><b>pass statement</b><br>The pass statement in Python is used when a statement is required syntactically but you do not want any command or code to execute.</td>
+    </tr>
+    </table>
+</div>
+</body>
+{% endblock %}

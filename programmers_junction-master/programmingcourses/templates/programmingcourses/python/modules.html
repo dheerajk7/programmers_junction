@@ -1,0 +1,86 @@
+{% extends 'programmingcourses/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block body %}
+<div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
+    <h1 style="color:blue">Modules</h1>
+
+<p>A module allows you to logically organize your Python code. Grouping related code into a module makes the code easier to understand and use. A module is a Python object with arbitrarily named attributes that you can bind and reference.
+Simply, a module is a file consisting of Python code. A module can define functions, classes and variables. A module can also include runnable code.</p>
+<h3>Example</h3>
+<p>The Python code for a module named aname normally resides in a file named aname.py. Here's an example of a simple module, support.py</p>
+<div style="background-color:white">
+<code>
+def print_func( par ):<br>
+   print "Hello : ", par<br>
+   return<br>
+</code>
+</div>
+<br>
+<p>The import Statement
+You can use any Python source file as a module by executing an import statement in some other Python source file. The import has the following syntax −
+import module1[, module2[,... moduleN]
+When the interpreter encounters an import statement, it imports the module if the module is present in the search path. A search path is a list of directories that the interpreter searches before importing a module. For example, to import the module support.py, you need to put the following command at the top of the script −</p>
+<div style="background-color:white">
+<code>
+#!/usr/bin/python <br>
+
+# Import module support<br>
+import support<br>
+
+# Now you can call defined function that module as follows<br>
+support.print_func("Zara")<br>
+
+</code>
+</div><br>
+<p>When the above code is executed, it produces the following result −</p>
+
+<div style="background-color:white">
+<code>
+Hello : Zara
+</code>
+</div><br>
+
+<p>A module is loaded only once, regardless of the number of times it is imported. This prevents the module execution from happening over and over again if multiple imports occur.</p>
+<h2 style="color:chocolate">The from...import Statement</h2>
+<p>Python's from statement lets you import specific attributes from a module into the current namespace. The from...import has the following syntax −</p>
+
+
+<div style="background-color:white">
+<code>
+from modname import name1[, name2[, ... nameN]]
+</code>
+</div><br>
+
+<p>For example, to import the function fibonacci from the module fib, use the following statement −</p>
+
+
+<div style="background-color:white">
+<code>
+from fib import fibonacci
+</code>
+</div><br>
+
+<p>This statement does not import the entire module fib into the current namespace; it just introduces the item fibonacci from the module fib into the global symbol table of the importing module.</p>
+<h2 style="color:chocolate">The from...import * Statement</h2>
+<p>It is also possible to import all names from a module into the current namespace by using the following import statement −</p>
+
+
+<div style="background-color:white">
+<code>
+from modname import *
+</code>
+</div><br>
+
+<p>This provides an easy way to import all the items from a module into the current namespace; however, this statement should be used sparingly.</p>
+<h2 style="color:chocolate">Locating Modules</h2>
+    <p>When you import a module, the Python interpreter searches for the module in the following sequences − </p>
+    <ul>
+    <li>The current directory.</li>
+    <li>If the module isn't found, Python then searches each directory in the shell variable PYTHONPATH.</li>
+    <li>If all else fails, Python checks the default path. On UNIX, this default path is normally /usr/local/lib/python/.</li>
+    <li>The module search path is stored in the system module sys as the sys.pathvariable. The sys.path variable contains the current directory, PYTHONPATH, and the installation-dependent default.</li>
+</ul>
+</div>
+{% endblock %}

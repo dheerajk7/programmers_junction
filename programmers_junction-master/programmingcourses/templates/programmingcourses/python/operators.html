@@ -1,0 +1,130 @@
+{% extends 'programmingcourses/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block body %}
+<head>
+    <style>
+        table, th ,td {
+        border : 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
+
+    <h1 style="color:blue">Operator</h1>
+    <p>Operators are the constructs which can manipulate the value of operands.
+Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands and + is called operator.
+</p>
+    <h2 style="color:chocolate">Types of Operator</h2>
+    <p>Python language supports the following types of operators.</p>
+    <ul>
+        <li> Arithmetic Operators</li>
+        <li>Comparison (Relational) Operators</li>
+        <li>Assignment Operators</li>
+        <li>Logical Operators</li>
+        <li>Bitwise Operators</li>
+        <li>Membership Operators</li>
+        <li>Identity Operators</li>
+    </ul>
+    <p>Let us hav3e a look on all operators one by one.</p>
+    <h2 style="color:chocolate">Python Arithmetic Operators</h2>
+    <p>Assume variable a holds 10 and variable b holds 20, then −</p>
+    <table>
+    <tr>
+        <th> <b>Operator </b></th>
+	<th><b> Description</b></th>
+	<th><b> Example</b></th>
+    </tr>
+    <tr>
+        <td>+ Addition</td>
+        <td>Adds values on either side of the operator.</td>
+        <td>a + b = 30</td>
+    </tr>
+           <tr>
+        <td>- Subtraction </td>
+        <td> Subtracts right hand operand from left hand operand.</td>
+        <td>a – b = -10 </td>
+    </tr>
+
+   <tr>
+        <td> * Multiplication</td>
+        <td>Multiplies values on either side of the operator </td>
+        <td>a * b = 200 </td>
+    </tr>
+
+ <tr>
+        <td> / Division</td>
+        <td> Divides left hand operand by right hand operand</td>
+        <td>b / a = 2 </td>
+    </tr>
+
+ <tr>
+        <td> % Modulus</td>
+        <td> Divides left hand operand by right hand operand and returns remainder</td>
+        <td>b % a = 0 </td>
+    </tr>
+
+ <tr>
+        <td> ** Exponent</td>
+        <td> Performs exponential (power) calculation on operators</td>
+        <td> a**b =10 to the power 20</td>
+    </tr>
+
+ <tr>
+        <td> //</td>
+        <td> Floor Division - The division of operands where the result is the quotient in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero (towards negative infinity) −</td>
+        <td> 9//2 = 4 and 9.0//2.0 = 4.0, -11//3 = -4, -11.0//3 = -4.0</td>
+    </tr>
+
+    </table>  <br>
+
+    <h2 style="color:chocolate">Python Comparison Operators</h2>
+    <p>These operators compare the values on either sides of them and decide the relation among them. They are also called Relational operators.
+<br>Assume variable a holds 10 and variable b holds 20, then −
+</p>
+<table>
+
+
+
+</table>
+
+    <h2 style="color:chocolate">Python Assignment Operators</h2>
+    <p>Assume variable a holds 10 and variable b holds 20 , then -</p>
+    <table>
+
+
+
+    </table>
+    <h2 style="color:chocolate">Python Bitwise Operators</h2>
+<p>Bitwise operator works on bits and performs bit by bit operation. Assume if a = 60; and b = 13; Now in binary format they will be as follows −</p>
+<p>a = 0011 1100</p>
+<p>b = 0000 1101</p>
+<p>-----------------</p>
+<p>a&b = 0000 1100</p>
+<p>a|b = 0011 1101</p>
+<p>a^b = 0011 0001</p>
+<p>~a  = 1100 0011</p>
+<p>There are following Bitwise operators supported by Python language-</p>
+    <table>
+
+
+
+    </table>
+    <h2 style="color:chocolate">Python Logical Operators</h2>
+    <p>There are following logical operators supported by Python language. Assume variable a holds 10 and variable b holds 20 then -</p>
+
+    <table>
+
+
+    </table>
+
+    <p>Used to reverse the logical state of its operand.</p>
+</div>
+</body>
+{% endblock %}

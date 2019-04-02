@@ -1,0 +1,180 @@
+{% extends 'programmingcourses/layout.html' %}
+
+{% block title %}Python{% endblock %}
+
+{% block body %}
+<head>
+    <style>
+        table, th ,td {
+        border : 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 15px;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
+    <h1 style="color:blue"><b>Data Types</b></h1>
+
+    <p>This guide is an overview of Python Data Types.</p>
+    <h2 style="color:chocolate">Overview</h2>
+    <p>Python has five standard Data Types :</p>
+    <ul>
+        <li>Numbers</li>
+        <li>String</li>
+        <li>List</li>
+        <li>Tuple</li>
+        <li>Dictionary</li>
+    </ul>
+    <p>Python sets the variable type based on the value that is assigned to it. Unlike more riggers languages, Python will change the variable type if the variable value is set to another value. For example:</p>
+    <div style="background-color:white">
+        <code>
+var = 123 # This will create a number integer assignment<br>
+var = 'john' # the `var` variable is now a string type.
+        </code>
+    </div>
+    <h2 style="color:chocolate">Numbers</h2>
+    <p>Python numbers variables are created by the standard Python method:</p>
+    <div style="background-color:white">
+        <code>
+            var=382
+        </code>
+    </div><br>
+    <p>
+        Most of the time using the standard Python number type is fine. Python will automatically convert a number from one type to another if it needs. But, under certain circumstances that a specific number type is needed (ie. complex, hexidecimal), the format can be forced into a format by using additional syntax in the table below:
+    </p>
+<table style="width:100%">
+    <tr>
+        <th><b>Type</b></th> <th><b>Foramt</b></th> <th><b>Description</b></th>
+    </tr>
+    <tr>
+        <td>Int</td>
+        <td>a=10</td>
+        <td>Signed Integer</td>
+    </tr>
+
+<tr>
+        <td>Long</td>
+        <td>a=345L</td>
+        <td> (L) Long integers, they can also be represented in octal and hexadecimal</td>
+</tr>
+
+<tr>
+        <td>Float </td>
+        <td>a=45.67</td>
+        <td> (.) Floating point real values</td>
+</tr>
+
+<tr>
+        <td>Complex </td>
+        <td>a=3.14J</td>
+        <td>(J) Contains integer in the range 0 to 255. </td>
+</tr>
+</table> <br>
+<p> Most of the time Python will do variable conversion automatically. You can also use Python conversion functions (int(), long(), float(), complex()) to convert data from one type to another. In addition, the type function returns information about how your data is stored within a variable.</p>
+    <div style="background-color:white">
+        <code>
+            message = "Good morning"<br>
+num = 85<br>
+pi = 3.14159<br>
+print(type(message))       # This will return a string<br>
+print(type(n))             # This will return an integer<br>
+print(type(pi))            # This will return a float<br>
+        </code>
+    </div><br>
+<h2 style="color:chocolate">String</h2>
+<p>Create string variables by enclosing characters in quotes. Python uses single quotes ' double quotes " and triple quotes """ to denote literal strings. Only the triple quoted strings """ also will automatically continue across the end of line statement.</p>
+<div style="background-color:white">
+    <code>
+        firstName = 'john'<br>
+lastName = "smith"<br>
+message = """This is a string that will span across multiple lines. Using newline characters<br>
+and no spaces for the next lines. The end of lines within this string also count as a newline when printed"""
+<br>
+    </code>
+</div> <br>
+<p>Strings can be accessed as a whole string, or a substring of the complete variable using brackets ‘[]’. Here are a couple examples:</p>
+<div style="background-color:white">
+    <code>
+        var1 = 'Hello World!' <br>
+var2 = 'RhinoPython'<br>
+
+print var1[0] # this will print the first character in the string an `H`<br>
+print var2[1:5] # this will print the substring 'hinoP`<br>
+
+    </code>
+</div> <br>
+<p>Python can use a special syntax to format multiple strings and numbers. The string formatter is quickly covered here because it is seen often and it is important to recognize the syntax.</p>
+<div style="background-color:white">
+    <code>
+print "The item {} is repeated {} times".format(element,count))
+    </code>
+</div> <br>
+<p>The {} are placeholders that are substituted by the variables element and count in the final string. This compact syntax is meant to keep the code more readable and compact.
+Python is currently transitioning to the format syntax above, but python can use an older syntax, which is being phased out, but is still seen in some example code:
+</p>
+<div style="background-color:white">
+    <code>
+print "The item %i is repeated %i times"% (element,count)
+    </code>
+</div> <br>
+<p>For more information on the string formatter in Python see the article: PyFormat Website
+For a more detailed look at string variables in Python, see the Tutorialspoint Python Tutorial on stings. Note: this article does use the older formatting syntax, but has a lot useful information.
+</p>
+<h2 style="color:chocolate">List</h2>
+<p>Lists are a very useful variable type in Python. A list can contain a series of values. List variables are declared by using brackets [ ] following the variable name.</p>
+<div style="background-color:white">
+    <code>
+A = [ ] # This is a blank list variable <br>
+B = [1, 23, 45, 67] # this list creates an initial list of 4 numbers.<br>
+C = [2, 4, 'john'] # lists can contain different variable types.<br>
+
+    </code>
+</div> <br>
+<p>All lists in Python are zero-based indexed. When referencing a member or the length of a list the number of list elements is always the number shown plus one.</p>
+<div style="background-color:white">
+    <code>
+mylist = ['Rhino', 'Grasshopper', 'Flamingo', 'Bongo']<br>
+B = len(mylist) # This will return the length of the list which is 3. The index is 0, 1, 2, 3.<br>
+print mylist[1] # This will return the value at index 1, which is 'Grasshopper'<br>
+print mylist[0:2] # This will return the first 3 elements in the list.<br>
+
+    </code>
+</div> <br>
+<h2 style="color:chocolate">Tuple</h2>
+<p>Tuples are a group of values like a list and are manipulated in similar ways. But, tuples are fixed in size once they are assigned. In Python the fixed size is considered immutable as compared to a list that is dynamic and mutable. Tuples are defined by parenthesis ().</p>
+<div style="background-color:white">
+    <code>
+myGroup = ('Rhino', 'Grasshopper', 'Flamingo', 'Bongo')
+    </code>
+</div> <br>
+<p>Here are some advantages of tupes over lists:</p>
+<ol>
+   <li>Elements to a tuple. Tuples have no append or extend method.</li>
+   <li>Elements cannot be removed from a tuple.</li>
+    <li>You can find elements in a tuple, since this doesn’t change the tuple.</li>
+    <li>You can also use the in operator to check if an element exists in the tuple.</li>
+    <li>Tuples are faster than lists. If you’re defining a constant set of values and all you’re ever going to do with it is iterate through it, use a tuple instead of a list.</li>
+    <li>It makes your code safer if you “write-protect” data that does not need to be changed.</li>
+
+</ol>
+<h2 style="color:chocolate">Dictionary</h2>
+<p>Dictionaries in Python are lists of Key:Value pairs. This is a very powerful datatype to hold a lot of related information that can be associated through keys. The main operation of a dictionary is to extract a value based on the key name. Unlike lists, where index numbers are used, dictionaries allow the use of a key to access its members. Dictionaries can also be used to sort, iterate and compare data.
+Dictionaries are created by using braces ({}) with pairs separated by a comma (,) and the key values associated with a colon(:). In Dictionaries the Key must be unique. Here is a quick example on how dictionaries might be used:
+</p>
+<div style="background-color:white">
+    <code>
+room_num = {'john': 425, 'tom': 212} <br>
+room_num['john'] = 645  # set the value associated with the 'john' key to 645<br>
+print (room_num['tom']) # print the value of the 'tom' key.<br>
+room_num['isaac'] = 345 # Add a new key 'isaac' with the associated value<br>
+print (room_num.keys()) # print out a list of keys in the dictionary<br>
+print ('isaac' in room_num) # test to see if 'issac' is in the dictionary.  This returns true.
+<br>
+    </code>
+</div> <br>
+    </div>
+</body>
+{% endblock %}
