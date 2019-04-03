@@ -1,9 +1,60 @@
 {% extends 'programmingcourses/layout.html' %}
 
-{% block title %}C++{% endblock %}
+{% block title %}Python{% endblock %}
 
 {% block body %}
 <div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
     <h1>Overloading and Overriding</h1>
+    <p>Like other languages (for example method overloading in C++) do, python does not supports method overloading. We may overload the methods but can only use the latest defined method.</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none<br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+def product(a, b): <br>
+    p = a * b <br>
+    print(p) <br>
+def product(a, b, c):<br>
+    p = a * b*c <br>
+    print(p) <br>
+product(4, 5, 5) <br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p><mark>100</mark></p>
+    <p>In the above code we have defined two product method, but we can only use the second product method, as python does not supports method overloading. We may define many method of same name and different argument but we can only use the latest defined method. Calling the other method will produce an error. Like here calling product(4, 5) will produce an error as the latest defined product method takes three arguments.
+However we may use other implementation in python to make the same function work differently i.e. as per the arguments.
+
+</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none<br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+def add(datatype, *args):<br>
+    if datatype =='int': <br>
+        answer = 0<br>
+    if datatype =='str':<br>
+        answer ='' <br>
+
+    for x in args: <br>
+        answer = answer + x<br>
+    print(answer) <br>
+add('int', 5, 6) <br>
+add('str', 'Hi ', 'Geeks')<br>
+
+        </code>
+    <p><b>Output :</b></p>
+    <p><mark>11<br>Hi Geeks</mark></p>
+    </div>
 </div>
 {% endblock %}

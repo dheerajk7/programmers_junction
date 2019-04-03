@@ -4,6 +4,96 @@
 
 {% block body %}
 <div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
-    <h1>Contructor</h1>
+    <h1>Constructors in Python</h1>
+    <h2 style="color:chocolate">Prerequisites :</h2>
+    <p>Constructors are generally used for instantiating an object.The task of constructors is to initialize(assign values) to the data members of the class when an object of class is created.In Python the __init__() method is called the constructor and is always called when an object is created.
+Syntax of constructor declaration :
+</p>
+    <div style="background-color:white">
+        <code>
+            def __init__(self):<br>
+    # body of the constructor<br>
+
+        </code>
+    </div>
+    <h2 style="color:chocolate">types of Constructors</h2>
+    <ul>
+        <li>default constructor :The default constructor is simple constructor which doesn’t accept any arguments.It’s definition has only one argument which is a reference to the instance being constructed.</li>
+        <li>parameterized constructor :constructor with parameters is known as parameterized constructor.The parameterized constructor take its first argument as a reference to the instance being constructed known as self and the rest of the arguments are provided by the programmer.
+Exa
+</li>
+    </ul>
+    <h3>Example of default constuctor :</h3>
+     <div style="background-color:white">
+        <code>
+           filter_none <br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+class GeekforGeeks:<br>
+    geek = "" <br>
+
+    # default constructor <br>
+    def __init__(self): <br>
+        self.geek = "GeekforGeeks"<br>
+
+    # a method for printing data members<br>
+    def print_Geek(self): <br>
+        print(self.geek) <br>
+
+
+# creating object of the class<br>
+obj = GeekforGeeks() <br>
+# calling the instance method using the object obj <br>
+obj.print_Geek() <br>
+
+        </code>
+    </div>
+    <p><mark>Output :</mark></p>
+    <p>GeekforGeeks</p>
+    <h3>Example of parameterized constructor :</h3>
+     <div style="background-color:white">
+        <code>
+            filter_none <br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+class Addition: <br>
+    first = 0<br>
+    second = 0<br>
+    answer = 0<br>
+
+    # parameterized constructor <br>
+    def __init__(self, f, s): <br>
+        self.first = f <br>
+        self.second = s <br>
+
+    def display(self): <br>
+        print("First number = " + str(self.first))<br>
+        print("Second number = " + str(self.second)) <br>
+        print("Addition of two numbers = " + str(self.answer))<br>
+
+    def calculate(self): <br>
+        self.answer = self.first + self.second <br>
+
+# creating object of the class <br>
+# this will invoke parameterized constructor<br>
+obj = Addition(1000, 2000) <br>
+
+# perform Addition <br>
+obj.calculate() <br>
+
+# display result <br>
+obj.display() <br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p>
+        First number = 1000 <br>
+Second number = 2000<br>
+Addition of two numbers = 3000<br>
+
+    </p>
 </div>
 {% endblock %}

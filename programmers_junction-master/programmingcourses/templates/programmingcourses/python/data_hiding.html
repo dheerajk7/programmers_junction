@@ -1,9 +1,166 @@
 {% extends 'programmingcourses/layout.html' %}
 
-{% block title %}C++{% endblock %}
+{% block title %}Python{% endblock %}
 
 {% block body %}
 <div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
-    <h1>Data Hiding</h1>
+    <h1 style="color:blue">Data Hiding</h1>
+    <p>In Python, we use double underscore (Or __) before the attributes name and those attributes will not be directly visible outside.</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none<br>
+edit<br>
+play_arrow<br>
+
+brightness_4<br>
+class MyClass: <br>
+
+    # Hidden member of MyClass <br>
+    __hiddenVariable = 0<br>
+
+    # A member method that changes  <br>
+    # __hiddenVariable  <br>
+    def add(self, increment): <br>
+        self.__hiddenVariable += increment <br>
+        print (self.__hiddenVariable) <br>
+
+# Driver code <br>
+myObject = MyClass()  <br>
+myObject.add(2) <br>
+myObject.add(5) <br>
+
+# This line causes error <br>
+print (myObject.__hiddenVariable)<br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p><mark>2 <br> 7</mark></p>
+    <p>Traceback (most recent call last):<br>
+  File "filename.py", line 13, in <br>
+    print (myObject.__hiddenVariable)<br>
+AttributeError: MyClass instance has <br>
+no attribute '__hiddenVariable' <br>
+In the above program, we tried to access hidden variable outside the class using object and it threw an exception.
+</p>
+    <p>
+We can access the value of hidden attribute by a tricky syntax:
+</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none <br>
+edit<br>
+play_arrow<br>
+
+brightness_4<br>
+# A Python program to demonstrate that hidden <br>
+# members can be accessed outside a class <br>
+class MyClass: <br>
+
+    # Hidden member of MyClass <br>
+    __hiddenVariable = 10<br>
+
+# Driver code <br>
+myObject = MyClass()      <br>
+print(myObject._MyClass__hiddenVariable) <br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p><mark>10</mark></p>
+   <p>Private methods are accessible outside their class, just not easily accessible. Nothing in Python is truly private; internally, the names of private methods and attributes are mangled and unmangled on the fly to make them seem inaccessible by their given names [See this for source ].</p>
+    <p>Printing Objects </p>
+    <p>Printing objects gives us information about objects we are working with. In C++, we can do this by adding a friend ostream& operator << (ostream&, const Foobar&) method for the class. In Java, we use toString() method. In python this can be achieved by using __repr__ or __str__ methods.</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none<br>
+edit<br>
+play_arrow<br>
+
+brightness_4<br>
+class Test: <br>
+    def __init__(self, a, b): <br>
+        self.a = a <br>
+        self.b = b <br>
+
+    def __repr__(self): <br>
+        return "Test a:%s b:%s" % (self.a, self.b)<br>
+
+    def __str__(self): <br>
+        return "From str method of Test: a is %s," \ <br>
+              "b is %s" % (self.a, self.b) <br>
+
+# Driver Code         <br>
+t = Test(1234, 5678) <br>
+print(t) # This calls __str__() <br>
+print([t]) # This calls __repr__() <br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p><mark>From str method of Test: a is 1234,b is 5678 <br>
+[Test a:1234 b:5678]
+</mark></p>
+    <p>Important Points about Printing: <br>
+        If no __str__ method is defined, print t (or print str(t)) uses __repr__.
+</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none <br>
+edit<br>
+play_arrow<br>
+
+brightness_4<br>
+class Test: <br>
+    def __init__(self, a, b): <br>
+        self.a = a <br>
+        self.b = b <br>
+
+    def __repr__(self):<br>
+        return "Test a:%s b:%s" % (self.a, self.b) <br>
+
+# Driver Code         <br>
+t = Test(1234, 5678) <br>
+print(t)  <br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p><mark>Test a:1234 b:5678</mark></p>
+    <p>If no __repr__ method is defined then the default is used.</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none <br>
+edit<br>
+play_arrow<br>
+
+brightness_4<br>
+class Test: <br>
+    def __init__(self, a, b): <br>
+        self.a = a <br>
+        self.b = b<br>
+# Driver Code         <br>
+t = Test(1234, 5678) <br>
+print(t)  <br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p><mark>< __main__.Test instance at 0x7fa079da6710></mark></p>
 </div>
 {% endblock %}

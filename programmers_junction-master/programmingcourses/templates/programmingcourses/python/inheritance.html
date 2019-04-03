@@ -1,9 +1,269 @@
 {% extends 'programmingcourses/layout.html' %}
 
-{% block title %}C++{% endblock %}
+{% block title %}Python{% endblock %}
 
 {% block body %}
 <div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
     <h1>Inheritance</h1>
+    <p>Inheritance is the capability of one class to derive or inherit the properties from some another class. The benefits of inheritance are:</p>
+    <ol>
+        <li>It represents real-world relationships well.</li>
+        <li>It provides reusability of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.</li>
+        <li>It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.</li>
+    </ol>
+    <p>Below is a simple example of inheritance in Python</p>
+    <div style="background-color:white">
+        <code>
+filter_none <br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+            # A Python program to demonstrate inheritance  <br>
+
+# Base or Super class. Note object in bracket. <br>
+# (Generally, object is made ancestor of all classes)<br>
+# In Python 3.x "class Person" is  <br>
+# equivalent to "class Person(object)" <br>
+class Person(object): <br>
+
+    # Constructor <br>
+    def __init__(self, name): <br>
+        self.name = name <br>
+
+    # To get name <br>
+    def getName(self):<br>
+        return self.name <br>
+
+    # To check if this person is employee <br>
+    def isEmployee(self): <br>
+        return False<br>
+
+
+# Inherited or Sub class (Note Person in bracket) <br>
+class Employee(Person): <br>
+
+    # Here we return true <br>
+    def isEmployee(self): <br>
+        return True<br>
+
+# Driver code <br>
+emp = Person("Geek1")  # An Object of Person <br>
+print(emp.getName(), emp.isEmployee()) <br>
+
+emp = Employee("Geek2") # An Object of Employee<br>
+print(emp.getName(), emp.isEmployee()) <br>
+
+        </code>
+        <p><b>Output:</b></p>
+        <p>Geek1 False<br>
+Geek2 True<br>
+886012<br>
+        </p>
+    </div>
+<p>If you forget to invoke the __init__() of the parent class then its instance variables would not be available to the child class.
+The following code produces an error for the same reason.
+</p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none <br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+# Python program to demonstrate error if we <br>
+# forget to invoke __init__() of parent. <br>
+
+class A: <br>
+      def __init__(self, n = 'Rahul'): <br>
+              self.name = n <br>
+class B(A): <br>
+      def __init__(self, roll): <br>
+              self.roll = roll <br>
+
+object = B(23) <br>
+print (object.name)<br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+    <p>Traceback (most recent call last):<br>
+  File "/home/de4570cca20263ac2c4149f435dba22c.py", line 12, in <br>
+    print (object.name)<br>
+AttributeError: 'B' object has no attribute 'name'<br>
+</p>
+    <p>Different forms of Inheritance:</p>
+    <h2 style="color:chocolate">1. Single inheritance:</h2>
+    <p>When a child class inherits from only one parent class, it is called as single inheritance. We saw an example above.</p>
+    <h2 style="color:chocolate">2. Multiple inheritance: </h2>
+    <p>When a child class inherits from multiple parent classes, it is called as multiple inheritance.
+Unlike Java and like C++, Python supports multiple inheritance. We specify all parent classes as comma separated list in bracket.
+
+    </p>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none<br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+# Python example to show working of multiple  <br>
+# inheritance <br>
+class Base1(object): <br>
+    def __init__(self): <br>
+        self.str1 = "Geek1"<br>
+        print "Base1"<br>
+
+class Base2(object): <br>
+    def __init__(self): <br>
+        self.str2 = "Geek2" <br>
+        print "Base2"<br>
+
+class Derived(Base1, Base2):<br>
+    def __init__(self): <br>
+
+        # Calling constructors of Base1 <br>
+        # and Base2 classes <br>
+        Base1.__init__(self) <br>
+        Base2.__init__(self) <br>
+        print "Derived"<br>
+
+    def printStrs(self): <br>
+        print(self.str1, self.str2) <br>
+
+
+ob = Derived() <br>
+ob.printStrs()<br>
+Output:<br>
+Base1<br>
+Base2<br>
+Derived<br>
+('Geek1', 'Geek2')<br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+
+
+
+<div style="background-color:white">
+        <code>
+Base1<br>
+Base2<br>
+Derived<br>
+Geek1 True E101<br>
+
+        </code>
+    </div>
+    <h2 style="color:chocolate">3. Multilevel inheritance: </h2>
+    <p>When we have child and grand child relationship.</p>
+
+<div style="background-color:white">
+        <code>
+filter_none<br><br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+# A Python program to demonstrate inheritance  <br>
+
+# Base or Super class. Note object in bracket. <br>
+# (Generally, object is made ancestor of all classes)<br>
+# In Python 3.x "class Person" is  <br>
+# equivalent to "class Person(object)" <br>
+class Base(object): <br>
+
+    # Constructor <br>
+    def __init__(self, name): <br>
+        self.name = name <br>
+
+    # To get name <br>
+    def getName(self):<br>
+        return self.name <br>
+
+
+# Inherited or Sub class (Note Person in bracket) <br>
+class Child(Base): <br>
+
+    # Constructor <br>
+    def __init__(self, name, age): <br>
+        Base.__init__(self, name) <br>
+        self.age = age <br>
+
+    # To get name <br>
+    def getAge(self): <br>
+        return self.age <br>
+
+# Inherited or Sub class (Note Person in bracket) <br>
+class GrandChild(Child): <br>
+
+    # Constructor <br>
+    def __init__(self, name, age, address): <br>
+        Child.__init__(self, name, age) <br>
+        self.address = address <br>
+
+    # To get address <br>
+    def getAddress(self):<br>
+        return self.address  <br>
+
+# Driver code <br>
+g = GrandChild("Geek1", 23, "Noida")   <br>
+print(g.getName(), g.getAge(), g.getAddress())<br>
+
+        </code>
+    <p><b>Output :</b></p>
+    <p><mark>Geek1 23 Noida</mark></p>
+    <h2 style="color:chocolate">4. Hybrid inheritance:</h2>
+    <p>
+       This form combines more than one form of inheritance. Basically, it is a blend of more than one type of inheritance.
+Private members of parent class
+We don’t always want the instance variables of the parent class to be inherited by the child class i.e. we can make some of the instance variables of the parent class private, which won’t be available to the child class.
+We can make an instance variable by adding double underscores before its name. For example,
+
+    </p>
+    </div>
+
+
+
+<div style="background-color:white">
+        <code>
+filter_none<br>
+edit<br>
+play_arrow<br>
+brightness_4<br>
+# Python program to demonstrate private members<br>
+# of the parent class <br>
+class C(object): <br>
+       def __init__(self):<br>
+              self.c = 21<br>
+
+              # d is private instance variable <br>
+              self.__d = 42    <br>
+class D(C): <br>
+       def __init__(self): <br>
+              self.e = 84<br>
+              C.__init__(self)<br>
+object1 = D() <br>
+
+# produces an error as d is private instance variable <br>
+print D.d                        <br>
+
+        </code>
+    </div>
+    <p><b>Output :</b></p>
+
+
+
+<div style="background-color:white">
+        <code>
+ File "/home/993bb61c3e76cda5bb67bd9ea05956a1.py", line 16, in<br>
+    print (D.d)					 <br>
+AttributeError: type object 'D' has no attribute 'd'<br>
+
+        </code>
+    </div>
+    <p>Since ‘d’ is made private by those underscores, it is not available to the child class ‘D’ and hence the error.</p>
 </div>
 {% endblock %}
