@@ -1,9 +1,105 @@
 {% extends 'programmingcourses/layout.html' %}
 
-{% block title %}C++{% endblock %}
+{% block title %}CSS{% endblock %}
 
 {% block body %}
 <div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
-    <h1>Arrays</h1>
+    <h1 style="color:blue">Background</h1>
+    <h2 style="color:chocolate">Background Color</h2>
+<p>The background-color property specifies the background color of an element.
+    The background color of a page is set like this:</p>
+<h3>Example</h3>
+body {<br>
+  background-color: lightblue;<br>
+}
+    <p>With CSS, a color is most often specified by:</p>
+    <ul>
+        <li>a valid color name - like "red"</li>
+        <li>a HEX value - like "#ff0000"</li>
+        <li>an RGB value - like "rgb(255,0,0)"</li>
+    </ul>
+<p>Look at CSS Color Values for a complete list of possible color values.
+    In the Example below, the &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; elements have different background colors:</p>
+<h3>Example</h3>
+h1 {<br>
+  background-color: green;<br>
+}<br>
+
+div {<br>
+  background-color: lightblue;<br>
+}<br>
+
+p {<br>
+  background-color: yellow;<br>
+}<br>
+    <h2 style="color:chocolate">Background Image</h2>
+<p>The background-image property specifies an image to use as the background of an element.
+By default, the image is repeated so it covers the entire element.
+    The background image for a page can be set like this:</p>
+<h3>Example</h3>
+body {<br>
+  background-image: url("paper.gif");<br>
+}<br>
+    <p>Below is an Example of a bad combination of text and background image. The text is hardly readable:</p>
+<h3>Example</h3>
+body {<br>
+  background-image: url("bgdesert.jpg");<br>
+}<br>
+    <p><mark>Note:</mark> When using a background image, use an image that does not disturb the text.
+Background Image - Repeat Horizontally or Vertically
+By default, the background-image property repeats an image both horizontally and vertically.
+    Some images should be repeated only horizontally or vertically, or they will look strange, like this:</p>
+<h3>Example</h3>
+body {<br>
+  background-image: url("gradient_bg.png");<br>
+}<br>
+    <p>If the image above is repeated only horizontally (background-repeat: repeat-x;), the background will look better:</p>
+<h3>Example</h3>
+body {<br>
+  background-image: url("gradient_bg.png");<br>
+  background-repeat: repeat-x;<br>
+}<br>
+    <p><mark>Tip: </mark>To repeat an image vertically, set background-repeat: repeat-y;</p>
+<h2 style="color:chocolate"> Background Image - Set position and no-repeat</h2>
+    <p>Showing the background image only once is also specified by the background-repeat property:</p>
+<h3>Example</h3>
+body {<br>
+  background-image: url("img_tree.png");<br>
+  background-repeat: no-repeat;<br>
+}<br>
+  <p>In the Example above, the background image is shown in the same place as the text. We want to change the position of the image, so that it does not disturb the text too much.
+      The position of the image is specified by the background-position property:</p>
+<h3>Example</h3>
+body {<br>
+  background-image: url("img_tree.png");<br>
+  background-repeat: no-repeat;<br>
+  background-position: right top;<br>
+}<br>
+<h2 style="color:chocolate"> Background Image - Fixed position</h2>
+    <p>To specify that the background image should be fixed (will not scroll with the rest of the page), use the background-attachment property:</p>
+<h3>Example</h3>
+body {<br>
+  background-image: url("img_tree.png");<br>
+  background-repeat: no-repeat;<br>
+  background-position: right top;<br>
+  background-attachment: fixed;<br>
+}
+<h2 style="color:chocolate"> Background - Shorthand property </h2>
+ <p>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+    The shorthand property for background is background: </p>
+<h3>Example</h3>
+body {<br>
+  background: #ffffff url("img_tree.png") no-repeat right top;<br>
+}<br>
+    <p>When using the shorthand property the order of the property values is:</p>
+    <ul>
+      <li>background-color</li>
+        <li>background-image</li>
+        <li>background-repeat</li>
+        <li>background-attachment</li>
+        <li>background-position</li>
+    </ul>
+
+    <p>It does not matter if one of the property values is missing, as long as the other ones are in this order.</p>
 </div>
 {% endblock %}

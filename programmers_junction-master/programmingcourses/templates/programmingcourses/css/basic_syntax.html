@@ -1,9 +1,86 @@
 {% extends 'programmingcourses/layout.html' %}
 
-{% block title %}C++{% endblock %}
+{% block title %}CSS{% endblock %}
 
 {% block body %}
 <div class="col-lg-8 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-1">
-    <h1>Arrays</h1>
+    <h1 style="color:blue">Basic Syntax</h1>
+    <p>A CSS rule-set consists of a selector and a declaration block:</p>
+<p>The selector points to the HTML element you want to style.
+The declaration block contains one or more declarations separated by semicolons.
+Each declaration includes a CSS property name and a value, separated by a colon.
+A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.
+In the following example all &lt;p&gt; elements will be center-aligned, with a red text color:<br>
+    <mark>   Example</mark></p>
+    <mark>p {</mark><br>
+    <mark> color: red;</mark><br>
+    <mark>text-align: center;</mark><br>
+ <mark>   } </mark><br>
+    <h2 style="color:chocolate"> CSS Selectors</h2>
+    <p>CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.</p>
+    <h2 style="color:chocolate"> The element Selector</h2>
+<p>The element selector selects elements based on the element name.
+You can select all &lt;p&gt; elements on a page like this (in this case, all &lt;p&gt; elements will be center-aligned, with a red text color):<br>
+    Example</p>
+p {<br>
+  text-align: center;<br>
+  color: red;<br>
+} <br>
+    <h2 style="color:chocolate">The id Selector</h2>
+<p>The id selector uses the id attribute of an HTML element to select a specific element.
+The id of an element should be unique within a page, so the id selector is used to select one unique element!
+To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+The style rule below will be applied to the HTML element with id="para1":<br>
+    Example</p>
+#para1 {<br>
+  text-align: center;<br>
+  color: red;<br>
+} <br>
+    <h2 style="color:chocolate"> The class Selector</h2>
+<p>The class selector selects elements with a specific class attribute.
+To select elements with a specific class, write a period (.) character, followed by the name of the class.
+In the example below, all HTML elements with class="center" will be red and center-aligned:<br>
+    Example</p>
+.center { <br>
+  text-align: center;<br>
+  color: red;<br>
+} <br>
+<p>You can also specify that only specific HTML elements should be affected by a class.
+In the example below, only &lt;p&gt; elements with class="center" will be center-aligned:<br>
+    Example</p>
+p.center { <br>
+  text-align: center;<br>
+  color: red;<br>
+} <br>
+<p>HTML elements can also refer to more than one class.
+In the example below, the &lt;p&gt; element will be styled according to class="center" and to class="large":<br>
+    Example</p>
+    <p>&lt;p class="center large"&gt;This paragraph refers to two classes.&lt;/p&gt; </p>
+    <h2 style="color:chocolate">Grouping Selectors</h2>
+<p>If you have elements with the same style definitions, like this:
+h1 { <br>
+  text-align: center;<br>
+  color: red;<br>
+} <br>
+
+h2 { <br>
+  text-align: center;<br>
+  color: red;<br>
+} <br>
+
+p { <br>
+  text-align: center;<br>
+  color: red;<br>
+} <br>
+It will be better to group the selectors, to minimize the code.
+To group selectors, separate each selector with a comma.
+In the example below we have grouped the selectors from the code above:<br>
+    Example
+h1, h2, p { <br>
+  text-align: center;<br>
+  color: red; <br>
+} <br>
+
+</p>
 </div>
 {% endblock %}
